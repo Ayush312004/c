@@ -1,4 +1,3 @@
-Write c++ program to draw man walking in rain with umbrella
 
 #include<conio.h>
 #include<iostream.h>
