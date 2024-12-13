@@ -5,19 +5,20 @@
 using namespace std;
 
 int main() {
-    map<string, long long> statePopulation;
-    statePopulation["Maharashtra"] = 39538223;
-    statePopulation["Bihar"] = 29145505;
-    statePopulation["MP"] = 21538187;
-    statePopulation["punjab"] = 20201249;
-    string stateName;
+    map<string, long long> statePopulations;
+    statePopulations["Maharashtra"] = 39538223;
+    statePopulations["goa"] = 29145505;
+    statePopulations["punjab"] = 21538187;
+    statePopulations["MP"] = 20201249;
+    statePopulations["UP"] = 13002700;
+    string state;
     cout << "Enter the name of a state to get its population: ";
-    getline(cin, stateName);
-    auto it = statePopulation.find(stateName);
-    if (it != statePopulation.end()) {
-        cout << "The population of " << stateName << " is= " << it->second << endl;
+    getline(cin, state);
+    auto it = statePopulations.find(state);
+    if (it != statePopulations.end()) {
+        cout << "The population of " << state << " is " << it->second << "." << endl;
     } else {
-        cout << "State not found!" << endl;
+        cout << "State not found in the map." << endl;
     }
 
     return 0;
